@@ -63,20 +63,6 @@ public class UploadController {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-        /*try {
-            InputStream in = req.getInputStream();
-            File file = new File("C:\\Users\\super\\Desktop\\a.png");
-            FileOutputStream fos = new FileOutputStream(file);
-            int length = 0;
-            while ((length=in.read()) != 0) {
-                fos.write(length);
-            }
-            return "success";
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return "fail";*/
         return "fail";
     }
 
