@@ -39,4 +39,5 @@
         </tbody>
     </table>
 </body>
+<a href="toPdf">点击导出PDF</a>
 </html>

@@ -13,5 +13,6 @@
 <body>
     <h1>上传成功！</h1>
     <a href="download">点击下载图片</a>
+    <a href="toPdf">点击导出PDF</a>
 </body>
 </html>
