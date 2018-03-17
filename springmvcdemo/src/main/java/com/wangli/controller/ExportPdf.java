@@ -16,11 +16,9 @@ import java.io.OutputStream;
 public class ExportPdf {
     @RequestMapping("toPdf")
     public void exportPdf(HttpServletRequest request, HttpServletResponse response) {
-        String html = ServletUtils.forward(request,response,"index.jsp"); //转发请求到jsp，返回解析之后的内容而不是输出到浏览器
-        //System.out.println(html);
-        byte[] pdf = new byte[0];
+        String html = ServletUtils.forward(request,response,"/WEB-INF/views/success.jsp"); //转发请求到jsp，返回解析之后的内容而不是输出到浏览器
         try {
-            pdf = PDFUtils.html2pdf(html);
+            byte[] pdf = PDFUtils.html2pdf(html);
             response.setContentType("application/pdf");
             response.setHeader("Content-Length",String.valueOf(pdf.length));
             response.setHeader("Connection","keep-alive");
